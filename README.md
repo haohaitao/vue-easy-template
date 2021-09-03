@@ -1,2 +1,31 @@
-# vue-easy-template
-一个模板demo，用于测试自己的脚手架
+<!--
+ * @Description  : 
+ * @Author       : pacino
+ * @Date         : 2021-09-03 15:48:19
+ * @LastEditTime : 2021-09-03 16:34:27
+ * @LastEditors  : pacino
+-->
+# hello-world
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
