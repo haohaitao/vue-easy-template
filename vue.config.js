@@ -2,7 +2,7 @@
  * @Description  :
  * @Author       : pacino
  * @Date         : 2021-09-03 17:32:42
- * @LastEditTime : 2021-09-07 16:57:49
+ * @LastEditTime : 2021-09-10 10:54:18
  * @LastEditors  : pacino
  */
 "use strict";
@@ -26,15 +26,18 @@ module.exports = {
   chainWebpack: (config) => {
     config.plugins.delete("preload"); // TODO: need test
     config.plugins.delete("prefetch"); // TODO: need test
-
-    // 别名 alias
-    config.resolve.alias
-      .set("@", resolve("src"))
-      .set("assets", resolve("src/assets"))
-      .set("api", resolve("src/api"))
-      .set("views", resolve("src/views"))
-      .set("components", resolve("src/components"))
-      .set("static", resolve("static"));
+    config.optimization.minimizer("terser").tap((args) => {
+      args[0].terserOptions.compress.drop_console = true;
+      return args;
+    }), // 去除console
+      // 别名 alias
+      config.resolve.alias
+        .set("@", resolve("src"))
+        .set("assets", resolve("src/assets"))
+        .set("api", resolve("src/api"))
+        .set("views", resolve("src/views"))
+        .set("components", resolve("src/components"))
+        .set("static", resolve("static"));
   },
   publicPath: "./", // 署应用包时的基本 URL。 vue-router hash 模式使用
   //  publicPath: '/app/', //署应用包时的基本 URL。  vue-router history模式使用

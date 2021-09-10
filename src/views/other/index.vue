@@ -2,7 +2,7 @@
  * @Description  : 
  * @Author       : pacino
  * @Date         : 2021-09-03 17:43:23
- * @LastEditTime : 2021-09-07 17:03:28
+ * @LastEditTime : 2021-09-10 10:57:09
  * @LastEditors  : pacino
 -->
 <template>
@@ -18,6 +18,9 @@ export default {
     return {};
   },
   methods: {},
+  created() {
+    console.log("---other----");
+  },
 };
 </script>
 

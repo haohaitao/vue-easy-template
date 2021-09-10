@@ -2,7 +2,7 @@
  * @Description  : 
  * @Author       : pacino
  * @Date         : 2021-09-03 17:19:57
- * @LastEditTime : 2021-09-09 15:05:26
+ * @LastEditTime : 2021-09-10 10:56:59
  * @LastEditors  : pacino
 -->
 <template>
@@ -19,6 +19,7 @@ export default {
     return {};
   },
   created() {
+    console.log("---home----");
     bbb().then(() => {
       // TODO
     });
